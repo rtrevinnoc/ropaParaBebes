@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+		<link href="product.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/5442dcb773.js" crossorigin="anonymous"></script>
+
+		<title>Moda Infantil</title>
+	</head>
+	<body>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+		<header class="site-header sticky-top py-1">
+			<nav class="container d-flex flex-column flex-md-row justify-content-between">
+				<a class="py-2 d-none d-md-inline-block" href="#footer">
+					<i class="fas fa-question"></i>
+				</a>
+				<a class="py-2 d-none d-md-inline-block" href="#" aria-label="Product">
+					<i class="fas fa-baby"></i>
+				</a>
+				<a class="py-2 d-none d-md-inline-block" href="./checkout.html">
+					<i class="fas fa-shopping-cart"></i>
+					<i id="elementosCarrito"><sup>0</sup></i>
+				</a>
+			</nav>
+		</header>
+
+		<main>
+			<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-info">
+				<div class="col-md-5 p-lg-5 mx-auto my-5">
+					<h1 class="display-4 fw-normal">Moda Infantil</h1>
+					<p class="lead fw-normal">Tenemos prendas comodas a precios justos para que puedas dar la mejor calidad de vida a tu bebé. Hecha a mano y con materiales sustentables, aseguras que la prenda que viste tu bebé fue creada con amor y dedicación.</p>
+					<span class="bg-secondary btn btn-outline-secondary text-light" id="filter">filtrar</span>
+				</div>
+			</div>
+			
+			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+				<div class="bg-transparent me-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center text-white overflow-hidden hideCarritoAlerta" id="carritoExito">
+					<div class="alert alert-success" role="alert" id="mensajeExito"></div>
+				</div>
+			</div>
+
+			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden nina" onclick='escogerDialogo("el Vestido de Campo")' style="background-color: var(--bs-pink);">
+					<div class="de_nina">
+						<div class="my-3 p-3">
+							<h2 class="display-5">Vestido de Campo <span class="text-white-50">$200</span></h2>
+							<p class="lead">para cuando la princesa sale del castillo</p>
+						</div>
+						<img src="https://www.monsoonlondon.com/dw/image/v2/BDLV_PRD/on/demandware.static/-/Sites-monsoon-master-catalog/default/dw33dd06b0/images/large/01_11210658_1.jpg?sw=470&sh=602&sm=cut" alt="VestidoCampo" style="height: 300px; border-radius: 21px 21px 0 0;"/>
+					</div>
+				</div>
+				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden nino" onclick='escogerDialogo("la Camiseta de Pesca")' style="background-color: var(--bs-teal);">
+					<div class="de_nino">
+						<div class="my-3 py-3">
+							<h2 class="display-5">Camiseta de Pesca <span class="text-muted">$200</span></h2>
+							<p class="lead">para los días de extremo calor</p>
+						</div>
+						<img src="https://cdn.shopify.com/s/files/1/0174/4468/products/100130-OC_1200x.jpg?v=1555477282" alt="CamisetaPesca" style="height: 300px; border-radius: 21px 21px 0 0;"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden nino" onclick='escogerDialogo("la Camisa de Vestir")' style="background-color: var(--bs-purple);">
+					<div class="de_nino">
+						<div class="my-3 p-3">
+							<h2 class="display-5">Camisa de Vestir <span class="text-light">$200</span></h2>
+							<p class="lead">para los eventos formales</p>
+						</div>
+						<img src="https://images-na.ssl-images-amazon.com/images/I/61zhHkuUxWL._AC_UL1200_.jpg" alt="CamisaVestir" style="height: 300px; border-radius: 21px 21px 0 0;"/>
+					</div>
+				</div>
+				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden nina" onclick='escogerDialogo("el Vestido Formal")' style="background-color: var(--bs-blue);">
+					<div class="de_nina">
+						<div class="my-3 py-3">
+							<h2 class="display-5">Vestido Formal <span class="text-white-50">$200</span></h2>
+							<p class="lead">como la princesa que es</p>
+						</div>
+						<img src="https://images.sellersourcebook.com/users/139871/m729_mint.jpg?1486061464" alt="VestidoFormal" style="height: 300px; border-radius: 21px 21px 0 0;"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden nina" onclick='escogerDialogo("la Falda de Arcoiris")' style="background-color: var(--bs-yellow);">
+					<div class="de_nina">
+						<div class="my-3 py-3">
+							<h2 class="display-5">Falda de Arcoíris <span class="text-muted">$200</span></h2>
+							<p class="lead">para que brille a donde vaya</p>
+						</div>
+						<img src="https://images-na.ssl-images-amazon.com/images/I/81eCZfSk95L._AC_UL1500_.jpg" alt="FaldaArcoiris" style="height: 300px; border-radius: 21px 21px 0 0;"/>
+					</div>
+				</div>
+				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden nino" onclick='escogerDialogo("el Short de Mezclilla")' style="background-color: var(--bs-cyan);">
+					<div class="de_nino">
+						<div class="my-3 p-3">
+							<h2 class="display-5">Short de Mezclilla <span class="text-muted">$200</span></h2>
+							<p class="lead">para las aventuras</p>
+						</div>
+						<img src="https://www.coppel.com/images/catalog/pr/5146412-1.jpg" alt="ShortMezclilla" style="height: 300px; border-radius: 21px 21px 0 0;"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden nino" onclick='escogerDialogo("la Playera de Changuito")' style="background-color: var(--bs-indigo);">
+					<div class="de_nino">
+						<div class="my-3 p-3">
+							<h2 class="display-5">Player de Changuito <span class="text-white-50">$200</span></h2>
+							<p class="lead">para un toque amigable</p>
+						</div>
+						<img src="https://www.glory-baby.com/wp-content/uploads/2019/11/14.jpg" alt="PlayeraChanguito" style="height: 300px; border-radius: 21px 21px 0 0;"/>
+					</div>
+				</div>
+				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden nina" onclick='escogerDialogo("la Playera de Mariposa")' style="background-color: var(--bs-orange);">
+					<div class="de_nina">
+						<div class="my-3 py-3">
+							<h2 class="display-5">Playera de Mariposa <span class="text-white-50">$200</span></h2>
+							<p class="lead">una bonita amiga pintada en su playera</p>
+						</div>
+						<img src="https://5.imimg.com/data5/MY/NB/GL/SELLER-27678632/summer-children-tops-tees-girls-t-shirt-stylish-butterfly-printed-baby-girls-t-shirt-new-cotton-500x500.jpg" alt="PlayeraMariposa" style="height: 300px; border-radius: 21px 21px 0 0;"/>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="container py-5" id="footer">
+			<div class="row">
+				<div class="col-12 col-md">
+					<i class="fas fa-baby"></i>
+					<small class="d-block mb-3 text-muted">&copy; 2021 Ropa para Bebés</small>
+				</div>
+				<div class="col-6 col-md">
+					<h5>¿Quiénes somos?</h5>
+					<p>Nosotros somos una empresa sustentable con sede en Monterrey, México. Estamos preocupados por la calidad y la disponibilidad de la ropa para nuestros infantes, y por lo tanto, ofrecemos el mejor producto al menor precio en todo el mercado.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script charset="utf-8">
+			var filter = document.getElementById("filter");
+			var carritoExito = document.getElementById("carritoExito");
+			var mensajeExito = document.getElementById("mensajeExito");
+			var elementosCarrito = document.getElementById("elementosCarrito");
+			var denino = document.getElementsByClassName("nino");
+			var denina = document.getElementsByClassName("nina");
+
+			filter.onclick = function() {
+				filter.classList.toggle("bg-secondary");
+				filter.classList.toggle("text-light");
+				filter.classList.toggle("text-dark");
+				filter.classList.toggle("bg-warning");
+				if (filter.textContent == "filtrar") {
+					filter.textContent = "mostrando para niña"
+
+					for (var i = 0; i < denino.length; i++) {
+						denino[i].classList.add('hide');
+						denino[i].classList.remove('show');
+						denina[i].classList.remove('hide');
+						denina[i].classList.add('show');
+					}
+				} else if (filter.textContent == "mostrando para niño") {
+					filter.textContent = "mostrando para niña"
+
+					for (var i = 0; i < denino.length; i++) {
+						denino[i].classList.add('hide');
+						denino[i].classList.remove('show');
+						denina[i].classList.remove('hide');
+						denina[i].classList.add('show');
+					}
+				} else {
+					filter.textContent = "mostrando para niño"
+
+					for (var i = 0; i < denino.length; i++) {
+						denina[i].classList.add('hide');
+						denina[i].classList.remove('show');
+						denino[i].classList.remove('hide');
+						denino[i].classList.add('show');
+					}
+
+				}
+			};
+
+			function setCookie(name,value,days) {
+			    var expires = "";
+			    if (days) {
+				var date = new Date();
+				date.setTime(date.getTime() + (days*24*60*60*1000));
+				expires = "; expires=" + date.toUTCString();
+			    }
+			    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+			}
+
+			function getCookie(name) {
+			    var nameEQ = name + "=";
+			    var ca = document.cookie.split(';');
+			    for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			    }
+			    return null;
+			}
+
+			function escogerDialogo(prenda) {
+				carritoExito.classList.remove('hideCarritoAlerta');
+				carritoExito.classList.add('show');
+				mensajeExito.textContent = "Se agregó " + prenda + " al carrito." 
+
+				previoCarrito = getCookie("carritoDeCompras")
+				if (previoCarrito == null) {
+					elementosCarrito.textContent = parseInt(elementosCarrito.textContent) + 1
+					setCookie("carritoDeCompras", prenda)
+				} else {
+					elementosCarrito.textContent = parseInt(elementosCarrito.textContent) + 1
+					setCookie("carritoDeCompras", previoCarrito + "/" + prenda)
+				}
+
+				setTimeout(function() {
+					carritoExito.classList.remove('show');
+					carritoExito.classList.add('hideCarritoAlerta');
+				}, 1000);
+			}
+		</script>
+	</body>
+</html>
