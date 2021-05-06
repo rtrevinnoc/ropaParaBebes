@@ -24,7 +24,7 @@
 				<a class="py-2 d-none d-md-inline-block" href="#" aria-label="Product">
 					<i class="fas fa-baby"></i>
 				</a>
-				<a class="py-2" href="./checkout.html">
+				<a class="py-2" href="./carrito.html">
 					<div class="d-block mx-auto">
 						<i class="fas fa-shopping-cart"></i>
 						<i id="elementosCarrito"><sup>0</sup></i>
@@ -210,6 +210,9 @@
 			    }
 			    return null;
 			}
+
+			elementosCarrito.textContent = getCookie("carritoDeCompras").split("/").length;
+			alert(getCookie("carritoDeCompras").split("/").length)
 
 			function escogerDialogo(prenda) {
 				carritoExito.classList.remove('hideCarritoAlerta');
