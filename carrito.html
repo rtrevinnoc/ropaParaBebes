@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
+		<link rel="icon" href="logo_dark.png">
 
 		<title>Carrito</title>
 
@@ -19,7 +20,7 @@
 
 		<div class="container">
 			<div class="py-5 text-center">
-				<a class="py-2 d-block mx-auto mb-4" style="color: #8e8e8e;" href="https://rtrevinnoc.github.io/ropaParaBebes/"><img src="./logo_dark.png" alt="La Canastilla" style="height: 48px; max-width: 100%;"/></a>
+				<a class="py-2 d-block mx-auto mb-4" style="color: #8e8e8e;" href="./index.html"><img src="./logo_dark.png" alt="La Canastilla" style="height: 48px; max-width: 100%;"/></a>
 
 				<h2>Carrito</h2>
 				<p class="lead">Aqui podrás pagar los productos que seleccionaste</p>
@@ -156,8 +157,9 @@
 		<!-- Bootstrap core JavaScript
 	  ================================================== -->
 	  <!-- Placed at the end of the document so the pages load faster -->
-	  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	  <script src="https://kit.fontawesome.com/5442dcb773.js" crossorigin="anonymous"></script>
 
 	  <script>
@@ -212,11 +214,12 @@
 			while(listaDeProductos.firstChild)
 				listaDeProductos.removeChild(listaDeProductos.firstChild);
 			carritoTotal.textContent = "$0";
+			document.location.href = '/index.html'
 		}
 
 		for (i = 0; i < elementosCarrito.length; i++) {
 			producto = document.createElement('li');
-				producto.innerHTML = '<div><h6 class="my-0">' + elementosCarrito[i].substring(3) + '</h6></div><span class="text-muted">$200</span>';
+				producto.innerHTML = '<div><h6 class="my-0">' + elementosCarrito[i] + '</h6></div><span class="text-muted">$200</span>';
 				producto.className = 'list-group-item d-flex justify-content-between lh-condensed';
 			listaDeProductos.insertBefore(producto, listaDeProductos.firstChild);
 		}
