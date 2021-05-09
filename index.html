@@ -10,21 +10,22 @@
 		<link href="product.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/5442dcb773.js" crossorigin="anonymous"></script>
 
-		<title>Moda Infantil</title>
+		<title>La Canastilla</title>
 	</head>
 	<body>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 		<header class="site-header sticky-top py-1">
-			<nav class="container d-flex flex-column flex-md-row justify-content-between">
-				<a class="py-2 d-none d-md-inline-block" href="#footer">
+			<nav class="container d-flex flex-column flex-md-row justify-content-between align-self-center">
+				<a class="py-3 d-none d-md-inline-block" href="#footer">
 					<i class="fas fa-question"></i>
 				</a>
 				<a class="py-2 d-none d-md-inline-block" href="#" aria-label="Product">
-					<i class="fas fa-baby"></i>
+					<img src="./logo.png" alt="La Canastilla" style="height: 48px; max-width: 100%;"/>
 				</a>
-				<a class="py-2" href="./carrito.html">
+				<a class="py-3 d-none d-md-inline-block" href="./carrito.html">
 					<div class="d-block mx-auto">
 						<i class="fas fa-shopping-cart"></i>
 						<i id="elementosCarrito"><sup>0</sup></i>
@@ -36,8 +37,13 @@
 		<main>
 			<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-info">
 				<div class="col-md-5 p-lg-5 mx-auto my-5">
-					<h1 class="display-4 fw-normal">Moda Infantil</h1>
+					<h1 class="display-4 fw-normal">La Canastilla</h1>
 					<p class="lead fw-normal">Tenemos prendas comodas a precios justos para que puedas dar la mejor calidad de vida a tu bebé. Hecha a mano y con materiales sustentables, aseguras que la prenda que viste tu bebé fue creada con amor y dedicación.</p>
+					<video width="480" height="320" autoplay>
+						<source src="video.mp4" type="video/mp4">
+						Su navegador no tiene soporte de la etiqueta video.
+					</video>
+					<br>
 					<span class="bg-secondary btn btn-outline-secondary text-light" id="filter">filtrar</span>
 				</div>
 			</div>
@@ -135,16 +141,46 @@
 
 		<footer class="container py-5" id="footer">
 			<div class="row">
-				<div class="col-12 col-md">
-					<i class="fas fa-baby"></i>
-					<small class="d-block mb-3 text-muted">&copy; 2021 Ropa para Bebés</small>
+				<div class="col-12 col-md text-center">
+					<img src="./logo_dark.png" alt="La Canastilla" style="height: 48px; max-width: 100%;"/>
+					<small class="d-block mb-3 text-muted">&copy; 2021</small>
 				</div>
 				<div class="col-6 col-md">
 					<h5>¿Quiénes somos?</h5>
-					<p>Nosotros somos una empresa sustentable con sede en Monterrey, México. Estamos preocupados por la calidad y la disponibilidad de la ropa para nuestros infantes, y por lo tanto, ofrecemos el mejor producto al menor precio en todo el mercado.</p>
+					<p class="text-justify">Nosotros somos una empresa sustentable con sede en Monterrey, México. Estamos preocupados por la calidad y la disponibilidad de la ropa para nuestros infantes, y por lo tanto, ofrecemos el mejor producto al menor precio en todo el mercado.</p>
+					<a data-toggle="modal" data-target="#contacto" style="color: #8e8e8e; text-decoration: underline;">Contactanos</a>
 				</div>
 			</div>
 		</footer>
+
+		<div class="modal" tabindex="-1" role="dialog" id="contacto">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Contactanos</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form class="needs-validation" novalidate>
+						  <div class="form-group">
+						    <label for="recipient-name" class="col-form-label">Remitente:</label>
+						    <input type="text" class="form-control" id="recipient-name" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="message-text" class="col-form-label">Mensaje:</label>
+						    <textarea class="form-control" id="message-text" required></textarea>
+						  </div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="sendMensaje()">Send message</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script charset="utf-8">
 			var filter = document.getElementById("filter");
@@ -226,6 +262,17 @@
 					elementosCarrito.textContent = parseInt(elementosCarrito.textContent) + 1
 					setCookie("carritoDeCompras", previoCarrito + "/" + prenda)
 				}
+
+				setTimeout(function() {
+					carritoExito.classList.remove('show');
+					carritoExito.classList.add('hideCarritoAlerta');
+				}, 1000);
+			}
+
+			function sendMensaje() {
+				carritoExito.classList.remove('hideCarritoAlerta');
+				carritoExito.classList.add('show');
+				mensajeExito.textContent = "Se ha enviado su mensaje."; 
 
 				setTimeout(function() {
 					carritoExito.classList.remove('show');
