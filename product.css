@@ -7,9 +7,7 @@
  */
 
 .site-header {
-	background-color: rgba(0, 0, 0, .85);
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	backdrop-filter: saturate(180%) blur(20px);
+	background-color: rgba(41, 60, 59, .85);
 }
 .site-header a {
 	color: #8e8e8e;

@@ -2,6 +2,10 @@
   --jumbotron-padding-y: 3rem;
 }
 
+.site-header {
+	background-color: rgba(41, 60, 59, .85);
+}
+
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
