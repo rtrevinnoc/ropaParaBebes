@@ -2,10 +2,6 @@
 	max-width: 960px;
 }
 
-/*
- * Custom translucent site header
- */
-
 .site-header {
 	background-color: rgba(41, 60, 59, .85);
 }
@@ -18,10 +14,6 @@
 	color: #fff;
 	text-decoration: none;
 }
-
-/*
- * Extra utilities
- */
 
 .flex-equal > * {
 	flex: 1;
