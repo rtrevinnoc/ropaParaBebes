@@ -11,7 +11,7 @@
     <title>Carrito</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link href="form-validation.css" rel="stylesheet">
+    <link href="carrito.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
@@ -59,7 +59,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="email">Correo Electrónico <span class="text-muted">(Optional)</span></label>
+                        <label for="email">Correo Electrónico <span class="text-muted">(Opcional)</span></label>
                         <input type="email" class="form-control" id="email" placeholder="nombre@dominio.com">
                         <div class="invalid-feedback">
                             Introduce una dirección de correo válida.
@@ -202,16 +202,17 @@
 
         function eraseCookie(name) {
             document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-            while (listaDeProductos.firstChild)
-                listaDeProductos.removeChild(listaDeProductos.firstChild);
-            carritoTotal.textContent = "$0";
+            //while (listaDeProductos.firstChild)
+            //    listaDeProductos.removeChild(listaDeProductos.firstChild);
+	    carritoTotal.textContent = "$0";
+		document.querySelectorAll('.carritoItem').forEach(e => e.remove());
             // document.location.href = './index.html'
         }
 
         for (i = 0; i < elementosCarrito.length; i++) {
             producto = document.createElement('li');
             producto.innerHTML = '<div><h6 class="my-0">' + elementosCarrito[i] + '</h6></div><span class="text-muted">$200</span>';
-            producto.className = 'list-group-item d-flex justify-content-between lh-condensed';
+            producto.className = 'list-group-item d-flex justify-content-between lh-condensed carritoItem';
             listaDeProductos.insertBefore(producto, listaDeProductos.firstChild);
         }
         carritoTotal.textContent = "$" + elementosCarrito.length * 200;
